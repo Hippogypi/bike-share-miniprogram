@@ -23,11 +23,5 @@
     <view class="usermotto">
       <text class="user-motto">{{motto}}</text>
     </view>
-    
-    <!-- 添加后端连接测试区域 -->
-    <view class="test-section">
-      <button bindtap="testBackendConnection">测试后端连接</button>
-      <text class="connection-status">{{connectionStatus}}</text>
-    </view>
   </view>
 </scroll-view>

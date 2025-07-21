@@ -1,0 +1,14 @@
+<!-- pages/login/login.wxml -->
+<view class="login-container">
+  <image src="/images/logo.png" class="logo"></image>
+  <view class="welcome-text">欢迎使用共享单车</view>
+  
+  <button 
+    class="login-btn"
+    bindtap="onLoginTap"
+  >
+    微信一键登录
+  </button>
+  
+  <view class="tip-text">登录后可使用完整功能</view>
+</view>
