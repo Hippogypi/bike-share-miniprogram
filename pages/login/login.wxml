@@ -1,11 +1,11 @@
 <!-- pages/login/login.wxml -->
 <view class="login-container">
-  <image src="/images/logo.png" class="logo"></image>
   <view class="welcome-text">欢迎使用共享单车</view>
   
   <button 
     class="login-btn"
     bindtap="onLoginTap"
+    loading="{{loading}}"
   >
     微信一键登录
   </button>

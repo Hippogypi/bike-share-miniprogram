@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <image src="/images/logo.png" mode="aspectFit"></image>
+    <text>欢迎注册共享单车系统</text>
+  </view>
+
+  <view class="agreement" bindtap="toggleAgreement">
+    <checkbox checked="{{agreed}}"></checkbox>
+    <text>我已阅读并同意《用户协议》</text>
+  </view>
+
+  <button 
+    type="primary" 
+    bindtap="onRegisterTap"
+    loading="{{loading}}"
+    disabled="{{!agreed}}"
+  >
+    微信一键注册
+  </button>
+
+  <view class="footer">
+    <text>已有账号？</text>
+    <navigator url="/pages/login/login" open-type="redirect">去登录</navigator>
+  </view>
+</view>

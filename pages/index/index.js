@@ -3,12 +3,7 @@ const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia0
 
 Page({
   onShow() {
-    const app = getApp();
+    console.log("indexPage")
     
-    if (!app.globalData.isLoggedIn) {
-      wx.redirectTo({
-        url: '/pages/login/login'
-      });
-    }
   },
 })

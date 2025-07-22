@@ -1,0 +1,47 @@
+.container {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-bottom: 60rpx;
+  text-align: center;
+}
+
+.header image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 20rpx;
+}
+
+.header text {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.footer navigator {
+  color: #07C160;
+  margin-left: 10rpx;
+}

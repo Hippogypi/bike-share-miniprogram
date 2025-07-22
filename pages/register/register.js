@@ -2,11 +2,27 @@ const { authAPI } = require('../../utils/api');
 
 Page({
   data: {
-    loading: false
+    loading: false,
+    agreed: false
   },
 
-  // 用户点击登录按钮
-  async onLoginTap() {
+  // 切换协议同意状态
+  toggleAgreement() {
+    this.setData({
+      agreed: !this.data.agreed
+    });
+  },
+
+  // 用户点击注册按钮
+  async onRegisterTap() {
+    if (!this.data.agreed) {
+      wx.showToast({
+        title: '请先同意用户协议',
+        icon: 'none'
+      });
+      return;
+    }
+
     this.setData({ loading: true });
     try {
       // 1. 获取用户信息
@@ -15,7 +31,7 @@ Page({
       // 2. 获取微信code
       const { code } = await this.getWxCode();
       
-      // 3. 调用登录接口
+      // 3. 调用登录/注册接口
       const res = await authAPI.wechatLogin(
         code,
         userInfo.nickName,
@@ -30,15 +46,14 @@ Page({
       });
       
       // 5. 跳转首页
-      console.log("adgjhwsxbajhkgwq")
       wx.reLaunch({
         url: '/pages/index/index'
       });
       
     } catch (error) {
-      console.error('登录失败:', error);
+      console.error('注册失败:', error);
       wx.showToast({
-        title: '登录失败，请重试',
+        title: '注册失败，请重试',
         icon: 'none'
       });
     }
